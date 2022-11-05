@@ -1,3 +1,5 @@
+import './styles/global.css';
+import header from "./modules/header";
 import getWeatherData from "./modules/weather";
 
-getWeatherData('');
+document.body.append(header());

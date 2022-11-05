@@ -1,0 +1,14 @@
+.header {
+  background-color: var(--header-bg-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.header label {
+  font-size: 2.5rem;
+}
+
+.header input {
+  outline: none;
+  padding: .5rem;
+}

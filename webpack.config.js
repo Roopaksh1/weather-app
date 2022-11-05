@@ -7,15 +7,22 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Weather App',
+      template: './src/index.html',
     }),
   ],
   module: {
     rules: [
       {
-        test: '/.css$/i',
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.png$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: './images/[hash][ext]'
+        }
+      }
     ],
   },
   output: {

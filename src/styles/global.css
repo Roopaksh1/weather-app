@@ -1,0 +1,15 @@
+:root {
+  font-size: 62.5%;
+  --header-bg-color: #bde0fe;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/background.jpg") no-repeat fixed center;
+  background-size: cover;
+}
