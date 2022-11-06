@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { add, format } from 'date-fns';
 import getWeatherData from './weather';
 
 const getCityName = (data) => data.name;
@@ -16,6 +16,23 @@ const getTemperature = (data) => {
   return { main, feelsLike };
 };
 
+const getTime = (data) => {
+  const { timezone } = data;
+  const hours = Math.floor(timezone / 3600);
+  const minutes = (timezone % 3600) / 60;
+  const time = add(
+    new Date(
+      new Date().getUTCFullYear(),
+      new Date().getUTCMonth(),
+      new Date().getUTCDate(),
+      new Date().getUTCHours(),
+      new Date().getUTCMinutes()
+    ),
+    { hours, minutes }
+  );
+  return format(time, 'EEEE, h:mm a');
+};
+
 const getWeatherDetails = async (query) => {
   const data = await getWeatherData(query);
   if (data === -1) return 0;
@@ -27,7 +44,7 @@ const getWeatherDetails = async (query) => {
   const wind = `${getWindSpeed(data)} km/h`;
   const icon = getWeatherIcon(data);
   const temp = getTemperature(data);
-  const time = format(new Date(), 'EEEE, h:mm a');
+  const time = getTime(data);
   return {
     city,
     weather,
