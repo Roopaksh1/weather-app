@@ -10,6 +10,9 @@
 }
 
 body {
+  min-height: 100vh;
   background: url("../images/background.jpg") no-repeat fixed center;
   background-size: cover;
+  display: grid;
+  grid-template-rows: 10vh 1fr 10vh;
 }

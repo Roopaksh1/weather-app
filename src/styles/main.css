@@ -1,0 +1,51 @@
+.main {
+  align-self: center;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.weather-details {
+  text-align: center;
+}
+
+.weather-details .temp {
+  font-size: 5rem;
+  color: #faa307;
+}
+
+.weather-details .max-min-temp {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.weather-details .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-details .container {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  justify-items: start;
+  align-items: center;
+  row-gap: 2rem;
+  font-size: 2.5rem;
+}
+
+.city-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+}
+
+.city-details .city {
+  font-size: 5rem;
+}
+
+.city-details .weather img {
+  max-width: 10rem;
+  vertical-align: middle;
+}
+

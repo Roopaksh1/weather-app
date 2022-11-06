@@ -3,7 +3,7 @@ import '../styles/header.css';
 const header = () => {
   const div = document.createElement('div');
   div.classList.add('header');
-  div.innerHTML = `<label>Location: </label> <input type="search"/>`
+  div.innerHTML = `<label>City: </label> <input type="search"/>`
   return div;
 }
 

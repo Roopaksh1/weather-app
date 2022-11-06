@@ -1,5 +1,8 @@
 import './styles/global.css';
 import header from "./modules/header";
-import getWeatherData from "./modules/weather";
+import showWeather from './modules/controller';
+import main from './modules/main';
 
 document.body.append(header());
+document.body.append(main());
+showWeather()
